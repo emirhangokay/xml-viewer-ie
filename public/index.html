@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self';
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data:;
+connect-src 'self'; 
+    frame-src 'self' data:;
+      "
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="E-Defter XML Görüntüleyici" />
+    <title>E-Defter Viewer</title>
+    <style>
+      * { margin:0; padding:0; box-sizing:border-box; }
+      body { font-family: Arial,sans-serif; background:#f5f5f5; }
+    </style>
+</head>
+<body>
+    <noscript>Uygulamayı çalıştırmak için JavaScript gereklidir.</noscript>
+    <div id="root"></div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+{
+  "name": "xml-viewer-ie",
+  "version": "1.1.7",
+  "description": "Electron tabanlı e-Defter XML görüntüleyici",
+  "private": false,
+  "main": "main.js",
+  "homepage": "./",
+  "scripts": {
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "start": "concurrently \"npm run react-start\" \"wait-on http://localhost:3000 && electron .\"",
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm run react-build && electron-builder",
+    "build-exe": "npm run clean && npm run react-build && electron-builder -w"
+  },
+  "dependencies": {
+    "dompurify": "^3.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3",
+    "rimraf": "^5.0.10",
+    "wait-on": "^7.2.0"
+  },
+  "build": {
+    "appId": "com.edefter.viewer",
+    "productName": "E-Defter Görüntüleyici",
+    "copyright": "Copyright © 2025",
+    "files": [
+      "build/**/*",
+      "main.js",
+      "preload.js",
+      "*.xslt",
+      "icon.ico"
+    ],
+    "win": {
+      "target": ["nsis"],
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "E-Defter Goruntuleyici"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
