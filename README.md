@@ -1,4 +1,4 @@
-# XML Viewer IE  
+# e-Defter XML Görüntüleyici
 **Electron tabanlı Türkçe e-Defter (e-Defter / e-Ledger) XML görüntüleyici**
 
 XML Viewer IE, Türkiye’de kullanılan e-Defter (Berat, Yevmiye, Kebir vb.) XML dosyalarını
